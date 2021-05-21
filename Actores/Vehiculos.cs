@@ -12,5 +12,17 @@ namespace Actores
         public string modelo { get; set; }
         public string año { get; set; }
         public string precio { get; set; }
+        public bool isEmpty(Vehiculos vehiculo)
+        {
+            if (vehiculo.marca.Equals(""))
+            {
+
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
     }
 }
