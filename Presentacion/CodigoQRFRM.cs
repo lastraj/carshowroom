@@ -7,8 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ReglasNegocio;
-using Actores;
 
 namespace Presentacion
 {
@@ -17,11 +15,6 @@ namespace Presentacion
         public CodigoQRFRM()
         {
             InitializeComponent();
-        }
-
-        public void pk_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

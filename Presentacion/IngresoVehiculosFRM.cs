@@ -38,7 +38,7 @@ namespace Presentacion
             }
             else
             {
-                if (Gvehi. RegistrarVehi(vehiculos))
+                if (Gvehi.RegistrarVehi(vehiculos))
                 {
                     MessageBox.Show("el vehiculo se ha registrado correctamente \n ¡Bienvenido!");
                     this.Hide();

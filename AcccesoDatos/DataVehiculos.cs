@@ -10,7 +10,7 @@ using Actores;
 
 namespace AcccesoDatos
 {
-    public class DataVehiculos
+   public class DataVehiculos
     {
         SqlConnection cn = new SqlConnection(ConfigurationManager.AppSettings["CadenaConexion"]);
         public bool Registrarvehiculos(Vehiculos vehiculos)
@@ -56,54 +56,6 @@ namespace AcccesoDatos
                 throw new Exception(err.Message);
             }
 
-
-
-        }
-        public DataTable MostrarVehiculosfiltro(Vehiculos vehiculos)
-        {
-            try
-            {
-                cn.Open();
-                SqlCommand cmd = new SqlCommand("USP_BuscarVehi", cn);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("@marca", vehiculos.marca);
-                SqlDataReader dr = cmd.ExecuteReader();
-                DataTable DGVehiculos = new DataTable();
-                DGVehiculos.Load(dr);
-                cn.Close();
-
-                return DGVehiculos;
-
-
-            }
-            catch (Exception err)
-            {
-
-                throw new Exception(err.Message);
-            }
-
-        }
-        public DataTable MostrarVehiculos(Vehiculos vehiculos)
-        {
-            try
-            {
-                cn.Open();
-                SqlCommand cmd = new SqlCommand("USP_BuscarVehiculoNormal", cn);
-                cmd.CommandType = CommandType.StoredProcedure;
-                SqlDataReader dr = cmd.ExecuteReader();
-                DataTable DGVehiculos = new DataTable();
-                DGVehiculos.Load(dr);
-                cn.Close();
-
-                return DGVehiculos;
-
-
-            }
-            catch (Exception err)
-            {
-
-                throw new Exception(err.Message);
-            }
         }
     }
 }
