@@ -24,6 +24,7 @@ namespace Presentacion
         public static string conversion1;
         string marca;
         GestorVehiculos GestorV = new GestorVehiculos();
+        private object pk;
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -61,7 +62,7 @@ namespace Presentacion
             QRCodeGenerator qrGenerator = new QRCodeGenerator();
             QRCodeData qrCodeData = qrGenerator.CreateQrCode(texToQr.Text, QRCodeGenerator.ECCLevel.Q);
             QRCode qrCode = new QRCode(qrCodeData);
-            pk.Image = qrCode.GetGraphic(5);
+            pk = qrCode.GetGraphic(5);
             
 
         }
@@ -73,10 +74,27 @@ namespace Presentacion
 
         private void DGVehiculos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            try
+            {
+                var test = DGVehiculos.CurrentCell.RowIndex;
+
+                string aux = DGVehiculos[1, e.RowIndex].Value.ToString(); // IMPORTAN
+                int idVehiculo = Convert.ToInt32(aux);
+                CalificacionVehiculosFRM CV = new CalificacionVehiculosFRM(idVehiculo);
+                CV.Show();
+            }
+            catch(Exception err)
+            {
+
+            }
         }
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void DGVehiculos_CellDoubleClic(object sender, DataGridViewCellEventArgs e)
         {
 
         }

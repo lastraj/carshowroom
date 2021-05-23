@@ -31,6 +31,7 @@ namespace Presentacion
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VisualizacionVehiculoFRM));
             this.DGVehiculos = new System.Windows.Forms.DataGridView();
+            this.Acciones = new System.Windows.Forms.DataGridViewButtonColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.txtMarca = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -49,15 +50,26 @@ namespace Presentacion
             // 
             this.DGVehiculos.BackgroundColor = System.Drawing.SystemColors.Window;
             this.DGVehiculos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGVehiculos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Acciones});
             this.DGVehiculos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DGVehiculos.GridColor = System.Drawing.SystemColors.Window;
-            this.DGVehiculos.Location = new System.Drawing.Point(212, 116);
-            this.DGVehiculos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DGVehiculos.Location = new System.Drawing.Point(176, 116);
+            this.DGVehiculos.Margin = new System.Windows.Forms.Padding(4);
             this.DGVehiculos.Name = "DGVehiculos";
-            this.DGVehiculos.Size = new System.Drawing.Size(282, 265);
+            this.DGVehiculos.Size = new System.Drawing.Size(318, 265);
             this.DGVehiculos.TabIndex = 0;
             this.DGVehiculos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVehiculos_CellClick);
             this.DGVehiculos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVehiculos_CellContentClick);
+            this.DGVehiculos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVehiculos_CellDoubleClic);
+            // 
+            // Acciones
+            // 
+            this.Acciones.DataPropertyName = "calbutton";
+            this.Acciones.HeaderText = "Calificar";
+            this.Acciones.Name = "Acciones";
+            this.Acciones.Text = "test";
+            this.Acciones.ToolTipText = "test";
             // 
             // button1
             // 
@@ -65,7 +77,7 @@ namespace Presentacion
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Location = new System.Drawing.Point(38, 233);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 1;
@@ -76,16 +88,16 @@ namespace Presentacion
             // txtMarca
             // 
             this.txtMarca.Location = new System.Drawing.Point(13, 187);
-            this.txtMarca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMarca.Margin = new System.Windows.Forms.Padding(4);
             this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(132, 23);
+            this.txtMarca.Size = new System.Drawing.Size(132, 22);
             this.txtMarca.TabIndex = 2;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.Location = new System.Drawing.Point(113, 13);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(256, 85);
             this.pictureBox1.TabIndex = 3;
@@ -109,7 +121,7 @@ namespace Presentacion
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label1.Location = new System.Drawing.Point(110, 403);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(292, 32);
+            this.label1.Size = new System.Drawing.Size(280, 32);
             this.label1.TabIndex = 5;
             this.label1.Text = "Seleccione el vehiculo que desee visualizar y\r\n posteriormente genere el codigo Q" +
     "R";
@@ -120,7 +132,7 @@ namespace Presentacion
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(10, 167);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(166, 16);
+            this.label2.Size = new System.Drawing.Size(159, 16);
             this.label2.TabIndex = 6;
             this.label2.Text = "Busqueda personalizada";
             // 
@@ -139,7 +151,7 @@ namespace Presentacion
             this.texToQr.Enabled = false;
             this.texToQr.Location = new System.Drawing.Point(484, 423);
             this.texToQr.Name = "texToQr";
-            this.texToQr.Size = new System.Drawing.Size(10, 23);
+            this.texToQr.Size = new System.Drawing.Size(10, 22);
             this.texToQr.TabIndex = 8;
             this.texToQr.TextChanged += new System.EventHandler(this.texToQR_TextChanged);
             // 
@@ -163,9 +175,9 @@ namespace Presentacion
             this.Controls.Add(this.txtMarca);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.DGVehiculos);
-            this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "VisualizacionVehiculoFRM";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CARSHOWROOM";
@@ -189,5 +201,6 @@ namespace Presentacion
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox texToQr;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.DataGridViewButtonColumn Acciones;
     }
 }
