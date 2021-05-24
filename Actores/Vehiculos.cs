@@ -8,9 +8,17 @@ namespace Actores
 {
     public class Vehiculos
     {
-        
+
+
+        public string marca { get; set; }
+        public string modelo { get; set; }
+        public string año { get; set; }
+        public string precio { get; set; }
+
         public bool isEmpty(Vehiculos vehiculo)
         {
+
+
             if (vehiculo.marca.Equals(""))
             {
 

@@ -15,6 +15,9 @@ namespace AcccesoDatos
         SqlConnection cn = new SqlConnection(ConfigurationManager.AppSettings["CadenaConexion"]);
         public bool Registrarvehiculos(Vehiculos vehiculos)
 
+
+
+
         {
             try
             {
