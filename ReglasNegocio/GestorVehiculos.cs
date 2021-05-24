@@ -13,32 +13,5 @@ namespace ReglasNegocio
 {
     public class GestorVehiculos
     {
-        DataVehiculos GestorVehi = new DataVehiculos();
-        public bool RegistrarVehi(Vehiculos vehiculos)
-        {
-            return GestorVehi.Registrarvehiculos(vehiculos);
-        }
-        public bool IsEmpty1(Vehiculos vehiculos)
-        {
-            if (vehiculos.marca.Equals("") || vehiculos.modelo.Equals(""))
-
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
-
-        }
-        public DataTable MostrarVehiculosfiltro(Vehiculos vehiculos)
-        {
-            return GestorVehi.MostrarVehiculosfiltro(vehiculos);
-        }
-        public DataTable MostrarVehiculos(Vehiculos vehiculos)
-        {
-            return GestorVehi.MostrarVehiculos(vehiculos);
-        }
         
-    }
 }

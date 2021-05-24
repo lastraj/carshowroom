@@ -67,7 +67,6 @@
   <ItemGroup>
     <Compile Include="GestorAdministradores.cs" />
     <Compile Include="GestorCalificacion.cs" />
-    <Compile Include="GestorEstadisticas.cs" />
     <Compile Include="GestorUsuarios.cs" />
     <Compile Include="GestorVehiculos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
