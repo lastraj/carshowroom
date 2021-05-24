@@ -13,9 +13,7 @@ namespace ReglasNegocio
     public class GestorCalificacion
     {
         DataCalificacion dataCalificacion = new DataCalificacion();
-        // 3 llamar sp de guardado
-
-        // 4 manejar la respuesta del sp
+     
         string respuestaInsercion = "";
 
         public string ingresarCalificacion(Calificacion calificacion)

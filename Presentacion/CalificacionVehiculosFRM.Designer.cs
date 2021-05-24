@@ -42,6 +42,7 @@ namespace Presentacion
             this.button1 = new System.Windows.Forms.Button();
             this.calificacionInput = new Syncfusion.Windows.Forms.Tools.RatingControl();
             this.label4 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -152,12 +153,22 @@ namespace Presentacion
             this.label4.Text = "Calificación";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel1.Location = new System.Drawing.Point(-136, 94);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(532, 14);
+            this.panel1.TabIndex = 13;
+            // 
             // CalificacionVehiculosFRM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(393, 449);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.calificacionInput);
             this.Controls.Add(this.button1);
@@ -189,5 +200,6 @@ namespace Presentacion
         private System.Windows.Forms.Button button1;
         private Syncfusion.Windows.Forms.Tools.RatingControl calificacionInput;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel1;
     }
 }

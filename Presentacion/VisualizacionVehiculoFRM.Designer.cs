@@ -29,9 +29,10 @@ namespace Presentacion
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VisualizacionVehiculoFRM));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DGVehiculos = new System.Windows.Forms.DataGridView();
-            this.Acciones = new System.Windows.Forms.DataGridViewButtonColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.txtMarca = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -41,6 +42,7 @@ namespace Presentacion
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.texToQr = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.Calificar = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DGVehiculos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -51,25 +53,27 @@ namespace Presentacion
             this.DGVehiculos.BackgroundColor = System.Drawing.SystemColors.Window;
             this.DGVehiculos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGVehiculos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Acciones});
+            this.Calificar});
             this.DGVehiculos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DGVehiculos.GridColor = System.Drawing.SystemColors.Window;
             this.DGVehiculos.Location = new System.Drawing.Point(176, 116);
             this.DGVehiculos.Margin = new System.Windows.Forms.Padding(4);
             this.DGVehiculos.Name = "DGVehiculos";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.NullValue = null;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGVehiculos.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.DGVehiculos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.DGVehiculos.Size = new System.Drawing.Size(318, 265);
             this.DGVehiculos.TabIndex = 0;
             this.DGVehiculos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVehiculos_CellClick);
             this.DGVehiculos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVehiculos_CellContentClick);
             this.DGVehiculos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVehiculos_CellDoubleClic);
-            // 
-            // Acciones
-            // 
-            this.Acciones.DataPropertyName = "calbutton";
-            this.Acciones.HeaderText = "Calificar";
-            this.Acciones.Name = "Acciones";
-            this.Acciones.Text = "test";
-            this.Acciones.ToolTipText = "test";
             // 
             // button1
             // 
@@ -160,6 +164,18 @@ namespace Presentacion
             this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
+            // Calificar
+            // 
+            this.Calificar.DataPropertyName = "Calificar";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.NullValue = "calificar";
+            this.Calificar.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Calificar.HeaderText = "Calificar";
+            this.Calificar.Name = "Calificar";
+            this.Calificar.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Calificar.ToolTipText = "Calificar";
+            this.Calificar.Width = 70;
+            // 
             // VisualizacionVehiculoFRM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -181,6 +197,7 @@ namespace Presentacion
             this.Name = "VisualizacionVehiculoFRM";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CARSHOWROOM";
+            this.Load += new System.EventHandler(this.VisualizacionVehiculoFRM_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGVehiculos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -201,6 +218,6 @@ namespace Presentacion
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox texToQr;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.DataGridViewButtonColumn Acciones;
+        private System.Windows.Forms.DataGridViewButtonColumn Calificar;
     }
 }

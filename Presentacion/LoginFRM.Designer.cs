@@ -56,17 +56,17 @@ namespace Presentacion
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(148, 113);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 28);
+            this.label1.Size = new System.Drawing.Size(130, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "INGRESO";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtIngresoMail
             // 
-            this.txtIngresoMail.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIngresoMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIngresoMail.Location = new System.Drawing.Point(84, 180);
             this.txtIngresoMail.Multiline = true;
             this.txtIngresoMail.Name = "txtIngresoMail";
@@ -76,37 +76,36 @@ namespace Presentacion
             // 
             // txtIngresoPass
             // 
-            this.txtIngresoPass.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIngresoPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIngresoPass.Location = new System.Drawing.Point(84, 275);
-            this.txtIngresoPass.Multiline = true;
             this.txtIngresoPass.Name = "txtIngresoPass";
-            this.txtIngresoPass.Size = new System.Drawing.Size(260, 36);
-            this.txtIngresoPass.TabIndex = 3;
+            this.txtIngresoPass.Size = new System.Drawing.Size(260, 24);
+            this.txtIngresoPass.TabIndex = 0;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(84, 157);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 20);
+            this.label2.Size = new System.Drawing.Size(56, 18);
             this.label2.TabIndex = 4;
             this.label2.Text = "E-MAIL";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(84, 252);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(107, 20);
+            this.label3.Size = new System.Drawing.Size(111, 18);
             this.label3.TabIndex = 5;
             this.label3.Text = "CONTRASEÑA";
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.Highlight;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(153, 435);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(116, 36);
@@ -128,7 +127,7 @@ namespace Presentacion
             this.rdbuser1.AutoSize = true;
             this.rdbuser1.Location = new System.Drawing.Point(25, 28);
             this.rdbuser1.Name = "rdbuser1";
-            this.rdbuser1.Size = new System.Drawing.Size(92, 19);
+            this.rdbuser1.Size = new System.Drawing.Size(80, 17);
             this.rdbuser1.TabIndex = 7;
             this.rdbuser1.TabStop = true;
             this.rdbuser1.Text = "Observador";
@@ -139,7 +138,7 @@ namespace Presentacion
             this.rdbAdmin1.AutoSize = true;
             this.rdbAdmin1.Location = new System.Drawing.Point(188, 28);
             this.rdbAdmin1.Name = "rdbAdmin1";
-            this.rdbAdmin1.Size = new System.Drawing.Size(75, 19);
+            this.rdbAdmin1.Size = new System.Drawing.Size(68, 17);
             this.rdbAdmin1.TabIndex = 8;
             this.rdbAdmin1.TabStop = true;
             this.rdbAdmin1.Text = "Expositor";
@@ -149,7 +148,7 @@ namespace Presentacion
             // 
             this.groupBox1.Controls.Add(this.rdbuser1);
             this.groupBox1.Controls.Add(this.rdbAdmin1);
-            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(70, 336);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(287, 63);
@@ -160,11 +159,11 @@ namespace Presentacion
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.linkLabel1.Location = new System.Drawing.Point(326, 458);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(79, 16);
+            this.linkLabel1.Size = new System.Drawing.Size(81, 16);
             this.linkLabel1.TabIndex = 10;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Registrarse!";

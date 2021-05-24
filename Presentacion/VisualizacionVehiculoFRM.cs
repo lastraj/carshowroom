@@ -98,5 +98,10 @@ namespace Presentacion
         {
 
         }
+
+        private void VisualizacionVehiculoFRM_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

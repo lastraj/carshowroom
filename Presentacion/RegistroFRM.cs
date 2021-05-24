@@ -39,8 +39,6 @@ namespace Presentacion
         {
 
             this.Hide();
-            //Inicio inicio = new Inicio();
-            //inicio.Show();
         }
 
         private void txtDocumento_TextChanged(object sender, EventArgs e)

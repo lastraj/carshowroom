@@ -38,9 +38,8 @@ namespace Presentacion
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
-            {
-                // 1 validar formulario y armar dato
+            try { 
+        
                 if (calificacionInput.Value == 0 || observacionInp.Text == "")
                 {
                     MessageBox.Show("Debes llenar todos los campos");
@@ -54,7 +53,6 @@ namespace Presentacion
                     calificacion.idCarro = idRecibido;
                 }
 
-                // Llamar gestor 
                 string respuesta = gestorCalificacion.ingresarCalificacion(calificacion);
 
                 if (respuesta == "true")
