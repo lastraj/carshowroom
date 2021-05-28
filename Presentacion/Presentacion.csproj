@@ -88,6 +88,12 @@
     <Compile Include="CodigoQRFRM.Designer.cs">
       <DependentUpon>CodigoQRFRM.cs</DependentUpon>
     </Compile>
+    <Compile Include="Top3FRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Top3FRM.Designer.cs">
+      <DependentUpon>Top3FRM.cs</DependentUpon>
+    </Compile>
     <Compile Include="IngresoVehiculosFRM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +125,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CodigoQRFRM.resx">
       <DependentUpon>CodigoQRFRM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Top3FRM.resx">
+      <DependentUpon>Top3FRM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IngresoVehiculosFRM.resx">
       <DependentUpon>IngresoVehiculosFRM.cs</DependentUpon>

@@ -29,10 +29,11 @@ namespace Presentacion
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VisualizacionVehiculoFRM));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DGVehiculos = new System.Windows.Forms.DataGridView();
+            this.Calificar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.txtMarca = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -42,7 +43,7 @@ namespace Presentacion
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.texToQr = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.Calificar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGVehiculos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -59,21 +60,33 @@ namespace Presentacion
             this.DGVehiculos.Location = new System.Drawing.Point(176, 116);
             this.DGVehiculos.Margin = new System.Windows.Forms.Padding(4);
             this.DGVehiculos.Name = "DGVehiculos";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.NullValue = null;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGVehiculos.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.NullValue = null;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGVehiculos.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.DGVehiculos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.DGVehiculos.Size = new System.Drawing.Size(318, 265);
             this.DGVehiculos.TabIndex = 0;
             this.DGVehiculos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVehiculos_CellClick);
             this.DGVehiculos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVehiculos_CellContentClick);
             this.DGVehiculos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVehiculos_CellDoubleClic);
+            // 
+            // Calificar
+            // 
+            this.Calificar.DataPropertyName = "Calificar";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.NullValue = "calificar";
+            this.Calificar.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Calificar.HeaderText = "Calificar";
+            this.Calificar.Name = "Calificar";
+            this.Calificar.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Calificar.ToolTipText = "Calificar";
+            this.Calificar.Width = 70;
             // 
             // button1
             // 
@@ -164,17 +177,19 @@ namespace Presentacion
             this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
-            // Calificar
+            // button3
             // 
-            this.Calificar.DataPropertyName = "Calificar";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.NullValue = "calificar";
-            this.Calificar.DefaultCellStyle = dataGridViewCellStyle1;
-            this.Calificar.HeaderText = "Calificar";
-            this.Calificar.Name = "Calificar";
-            this.Calificar.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Calificar.ToolTipText = "Calificar";
-            this.Calificar.Width = 70;
+            this.button3.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.Location = new System.Drawing.Point(38, 283);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(100, 28);
+            this.button3.TabIndex = 9;
+            this.button3.Text = "Top 3";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // VisualizacionVehiculoFRM
             // 
@@ -182,6 +197,7 @@ namespace Presentacion
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(507, 524);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.texToQr);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label2);
@@ -219,5 +235,6 @@ namespace Presentacion
         private System.Windows.Forms.TextBox texToQr;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.DataGridViewButtonColumn Calificar;
+        private System.Windows.Forms.Button button3;
     }
 }
