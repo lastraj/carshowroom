@@ -191,5 +191,12 @@ namespace Presentacion
         {
 
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            LoginFRM loge = new LoginFRM();
+            loge.Show();
+        }
     }
 }

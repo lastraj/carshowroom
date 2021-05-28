@@ -20,25 +20,32 @@ namespace Presentacion
             InitializeComponent();
         }
 
-         GestorTop GestorT = new GestorTop();
+         GestorCalificacion GestorT = new GestorCalificacion();
 
-        private void DGVtop_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        public void DGVtop_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void button1_Click(object sender, EventArgs e)
         {
             Vehiculos vehiculo = new Vehiculos();
 
             DGVtop.DataSource = GestorT.MostrarTop(vehiculo);
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        public void button2_Click(object sender, EventArgs e)
         {
             Vehiculos vehiculo = new Vehiculos();
 
             DGVtop.DataSource = GestorT.MostrarTopMenos(vehiculo);
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
+            VisualizacionVehiculoFRM ver = new VisualizacionVehiculoFRM();
+            ver.Show();
         }
     }
 }

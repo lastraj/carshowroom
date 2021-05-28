@@ -42,6 +42,7 @@ namespace Presentacion
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,7 +50,7 @@ namespace Presentacion
             // 
             this.txtContraseña.Location = new System.Drawing.Point(196, 121);
             this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(100, 22);
+            this.txtContraseña.Size = new System.Drawing.Size(100, 23);
             this.txtContraseña.TabIndex = 0;
             this.txtContraseña.TextChanged += new System.EventHandler(this.txtContraseña_TextChanged);
             // 
@@ -57,7 +58,7 @@ namespace Presentacion
             // 
             this.txtNom.Location = new System.Drawing.Point(196, 95);
             this.txtNom.Name = "txtNom";
-            this.txtNom.Size = new System.Drawing.Size(100, 22);
+            this.txtNom.Size = new System.Drawing.Size(100, 23);
             this.txtNom.TabIndex = 1;
             this.txtNom.TextChanged += new System.EventHandler(this.txtNom_TextChanged);
             // 
@@ -65,7 +66,7 @@ namespace Presentacion
             // 
             this.txtCorreo.Location = new System.Drawing.Point(196, 147);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(100, 22);
+            this.txtCorreo.Size = new System.Drawing.Size(100, 23);
             this.txtCorreo.TabIndex = 2;
             this.txtCorreo.TextChanged += new System.EventHandler(this.txtCorreo_TextChanged);
             // 
@@ -87,7 +88,7 @@ namespace Presentacion
             // 
             this.txtEmp.Location = new System.Drawing.Point(196, 174);
             this.txtEmp.Name = "txtEmp";
-            this.txtEmp.Size = new System.Drawing.Size(100, 22);
+            this.txtEmp.Size = new System.Drawing.Size(100, 23);
             this.txtEmp.TabIndex = 6;
             // 
             // groupBox1
@@ -108,7 +109,7 @@ namespace Presentacion
             this.rdb_Admin.Checked = true;
             this.rdb_Admin.Location = new System.Drawing.Point(158, 20);
             this.rdb_Admin.Name = "rdb_Admin";
-            this.rdb_Admin.Size = new System.Drawing.Size(77, 18);
+            this.rdb_Admin.Size = new System.Drawing.Size(83, 20);
             this.rdb_Admin.TabIndex = 1;
             this.rdb_Admin.TabStop = true;
             this.rdb_Admin.Text = "Expositor";
@@ -120,7 +121,7 @@ namespace Presentacion
             this.rdb_Usuario.AutoSize = true;
             this.rdb_Usuario.Location = new System.Drawing.Point(11, 20);
             this.rdb_Usuario.Name = "rdb_Usuario";
-            this.rdb_Usuario.Size = new System.Drawing.Size(89, 18);
+            this.rdb_Usuario.Size = new System.Drawing.Size(101, 20);
             this.rdb_Usuario.TabIndex = 0;
             this.rdb_Usuario.Text = "Observador";
             this.rdb_Usuario.UseVisualStyleBackColor = true;
@@ -131,7 +132,7 @@ namespace Presentacion
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(81, 98);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 14);
+            this.label1.Size = new System.Drawing.Size(61, 16);
             this.label1.TabIndex = 8;
             this.label1.Text = "Nombre";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -141,7 +142,7 @@ namespace Presentacion
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(81, 124);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 14);
+            this.label2.Size = new System.Drawing.Size(84, 16);
             this.label2.TabIndex = 9;
             this.label2.Text = "Contraseña";
             // 
@@ -150,7 +151,7 @@ namespace Presentacion
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(81, 150);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 14);
+            this.label3.Size = new System.Drawing.Size(47, 16);
             this.label3.TabIndex = 10;
             this.label3.Text = "E-mail";
             // 
@@ -159,9 +160,21 @@ namespace Presentacion
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(81, 177);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 14);
+            this.label4.Size = new System.Drawing.Size(63, 16);
             this.label4.TabIndex = 11;
             this.label4.Text = "Empresa";
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.linkLabel1.Location = new System.Drawing.Point(329, 9);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(48, 16);
+            this.linkLabel1.TabIndex = 12;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Volver";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // RegistroFRM
             // 
@@ -171,6 +184,7 @@ namespace Presentacion
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(389, 328);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -182,7 +196,7 @@ namespace Presentacion
             this.Controls.Add(this.txtNom);
             this.Controls.Add(this.txtContraseña);
             this.DoubleBuffered = true;
-            this.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RegistroFRM";
             this.Text = "CarShowroom";
@@ -208,5 +222,6 @@ namespace Presentacion
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

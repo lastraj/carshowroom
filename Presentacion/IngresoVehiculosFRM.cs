@@ -31,6 +31,8 @@ namespace Presentacion
             vehiculos.marca = txtMarca.Text;
             vehiculos.modelo = txtModelo.Text;
             vehiculos.año = txtAño.Text;
+            vehiculos.motor = TXTmotor.Text;
+            vehiculos.linea = TXTlinea.Text;
             vehiculos.precio = txtPrecio.Text;
             if (Gvehi.IsEmpty1(vehiculos) == false)
             {
@@ -51,10 +53,19 @@ namespace Presentacion
                     txtMarca.Clear();
                     txtModelo.Clear();
                     txtAño.Clear();
+                    TXTmotor.Clear();
+                    TXTlinea.Clear();
                     txtPrecio.Clear();
 
                 }
             }
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
+            VisualizacionVehiculoFRM ver = new VisualizacionVehiculoFRM();
+            ver.Show();
         }
     }
 }

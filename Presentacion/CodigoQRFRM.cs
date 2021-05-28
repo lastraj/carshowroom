@@ -23,5 +23,12 @@ namespace Presentacion
         {
 
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
+            VisualizacionVehiculoFRM ver = new VisualizacionVehiculoFRM();
+            ver.Show();
+        }
     }
 }

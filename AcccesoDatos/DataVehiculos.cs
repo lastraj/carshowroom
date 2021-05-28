@@ -36,6 +36,8 @@ namespace AcccesoDatos
                 cmd.Parameters.Add("@marca", vehiculos.marca);
                 cmd.Parameters.Add("@modelo", vehiculos.modelo);
                 cmd.Parameters.Add("@año", vehiculos.año);
+                cmd.Parameters.Add("@motorizacion", vehiculos.motor);
+                cmd.Parameters.Add("@linea", vehiculos.linea);
                 cmd.Parameters.Add("@precio", vehiculos.precio);
 
                 cn.Open();

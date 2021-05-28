@@ -68,6 +68,8 @@ namespace Presentacion
             {
                 throw new Exception(err.Message);
             }
+            this.Hide();
+            
         }
 
         private void label4_Click(object sender, EventArgs e)

@@ -44,18 +44,27 @@ namespace Presentacion
                 }
                 else
                 {
-                    if (Guser.iniciarSesionUser(usuario))
+                    if (Guser.email_bien_escrito(usuario) == true)
                     {
-                        MessageBox.Show("Bienvenido a carshowroom");
-                        this.Hide();
-                        VisualizacionVehiculoFRM VerVeh = new VisualizacionVehiculoFRM();
-                        
-                        VerVeh.Show();
+                        if (Guser.iniciarSesionUser(usuario))
+                        {
+                            MessageBox.Show("Bienvenido a carshowroom");
+                            this.Hide();
+                            VisualizacionVehiculoFRM VerVeh = new VisualizacionVehiculoFRM();
+
+                            VerVeh.Show();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Credenciales incorrectas");
+                        }
+
                     }
                     else
                     {
-                        MessageBox.Show("Credenciales incorrectas");
+                        MessageBox.Show("debes escribir un correo electronico valido (ejemplo@ejemplo.com)", "formato de correo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
+
                 }
             }
             if (rdbAdmin1.Checked)
@@ -68,20 +77,30 @@ namespace Presentacion
                 {
                     MessageBox.Show("Debes llenar todos los campos");
                 }
+
                 else
                 {
-                    if (Gadmin.iniciarSesionAdmin(administradores))
+                    if (Gadmin.email_bien_escrito(administradores) == true)
                     {
-                        MessageBox.Show("Administrador, Bienvenido a carshowroom");
-                        this.Hide();
-                        IngresoVehiculosFRM InVeh = new IngresoVehiculosFRM();
+                        if (Gadmin.iniciarSesionAdmin(administradores))
+                        {
+                            MessageBox.Show("Administrador, Bienvenido a carshowroom");
+                            this.Hide();
+                            IngresoVehiculosFRM InVeh = new IngresoVehiculosFRM();
 
-                        InVeh.Show();
+                            InVeh.Show();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Credenciales incorrectas", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        }
+
                     }
                     else
                     {
-                        MessageBox.Show("Credenciales incorrectas");
+                        MessageBox.Show("debes escribir un correo electronico valido (ejemplo@ejemplo.com)", "formato de correo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
+
                 }
 
             }
@@ -92,6 +111,17 @@ namespace Presentacion
             this.Hide();
             RegistroFRM rfrm = new RegistroFRM();
             rfrm.Show();
+        }
+
+        private void txtIngresoPass_TextChanged(object sender, EventArgs e)
+        {
+            txtIngresoPass.PasswordChar = '*';
+            txtIngresoPass.MaxLength = 20;
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
         }
     }
 }

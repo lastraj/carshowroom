@@ -42,6 +42,7 @@ namespace Presentacion
             this.rdbAdmin1 = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,10 +68,10 @@ namespace Presentacion
             // txtIngresoMail
             // 
             this.txtIngresoMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIngresoMail.Location = new System.Drawing.Point(84, 180);
+            this.txtIngresoMail.Location = new System.Drawing.Point(84, 199);
             this.txtIngresoMail.Multiline = true;
             this.txtIngresoMail.Name = "txtIngresoMail";
-            this.txtIngresoMail.Size = new System.Drawing.Size(260, 36);
+            this.txtIngresoMail.Size = new System.Drawing.Size(260, 25);
             this.txtIngresoMail.TabIndex = 2;
             this.txtIngresoMail.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -81,12 +82,13 @@ namespace Presentacion
             this.txtIngresoPass.Name = "txtIngresoPass";
             this.txtIngresoPass.Size = new System.Drawing.Size(260, 24);
             this.txtIngresoPass.TabIndex = 0;
+            this.txtIngresoPass.TextChanged += new System.EventHandler(this.txtIngresoPass_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(84, 157);
+            this.label2.Location = new System.Drawing.Point(84, 178);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 18);
             this.label2.TabIndex = 4;
@@ -169,6 +171,17 @@ namespace Presentacion
             this.linkLabel1.Text = "Registrarse!";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Location = new System.Drawing.Point(25, 436);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(55, 13);
+            this.linkLabel2.TabIndex = 11;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "linkLabel2";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            // 
             // LoginFRM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -177,6 +190,7 @@ namespace Presentacion
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(426, 483);
+            this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel2);
@@ -212,6 +226,7 @@ namespace Presentacion
         private System.Windows.Forms.RadioButton rdbAdmin1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel linkLabel2;
     }
 }
 

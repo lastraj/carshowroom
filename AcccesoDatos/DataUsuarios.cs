@@ -98,5 +98,46 @@ namespace AcccesoDatos
             }
 
         }
+        public bool recuperarcontrauser(Usuarios usuario)
+        {
+            try
+            {
+                bool existe = false;
+                string respuesta = "";
+
+
+
+                SqlCommand cmd = new SqlCommand("USP_IniciarSesionUser", cn);
+
+
+
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add("@correo", usuario.correo);
+                cmd.Parameters.Add("@contraseña", usuario.contraseña);
+
+
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.Read() == true)
+                {
+                    respuesta = dr["respuesta"].ToString();
+                    cn.Close();
+                }
+
+
+                if (respuesta.Equals("true"))
+                {
+                    existe = true;
+                }
+
+                return existe;
+            }
+            catch (Exception err)
+            {
+                throw new Exception(err.Message);
+            }
+
+        }
     }
 }

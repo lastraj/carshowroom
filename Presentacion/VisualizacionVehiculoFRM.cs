@@ -22,6 +22,11 @@ namespace Presentacion
         }
         public static string conversion;
         public static string conversion1;
+        public static string conversion2;
+        public static string conversion3;
+        public static string conversion4;
+        public static string conversion5;
+        public static string conversion6;
         string marca;
         GestorVehiculos GestorV = new GestorVehiculos();
         private object pk;
@@ -34,18 +39,28 @@ namespace Presentacion
             if (vehiculo.isEmpty(vehiculo) == false)
             {
                 DGVehiculos.DataSource = GestorV.MostrarVehiculos(vehiculo);
+                DGVehiculos.Columns[1].Visible = false;
+                DGVehiculos.Columns[4].Visible = false;
+                DGVehiculos.Columns[5].Visible = false;
+                DGVehiculos.Columns[6].Visible = false;
+                DGVehiculos.Columns[7].Visible = false;
+
             }
             else
             {
                 DGVehiculos.DataSource = GestorV.MostrarVehiculosfiltro(vehiculo);
+                DGVehiculos.Columns[1].Visible = false;
+                DGVehiculos.Columns[4].Visible = false;
+                DGVehiculos.Columns[5].Visible = false;
+                DGVehiculos.Columns[6].Visible = false;
+                DGVehiculos.Columns[7].Visible = false;
 
             }
         }
 
         private void DGVehiculos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            conversion = DGVehiculos.Rows[e.RowIndex].Cells["Marca"].Value.ToString();
-            conversion1 = DGVehiculos.Rows[e.RowIndex].Cells["Modelo"].Value.ToString();
+           
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -55,16 +70,25 @@ namespace Presentacion
 
         private void button2_Click(object sender, EventArgs e)
         {
+            Top3FRM tp = new Top3FRM();
 
-            CodigoQRFRM QR = new CodigoQRFRM();
-            QR.Show();
-            texToQr.Text = $"{conversion}\r\n{conversion1}";
+            conversion = DGVehiculos.CurrentRow.Cells[2].Value.ToString();
+            conversion1 = DGVehiculos.CurrentRow.Cells[3].Value.ToString();
+            conversion2 = DGVehiculos.CurrentRow.Cells[4].Value.ToString();
+            conversion3 = DGVehiculos.CurrentRow.Cells[5].Value.ToString();
+            conversion4 = DGVehiculos.CurrentRow.Cells[6].Value.ToString();
+            conversion5 = DGVehiculos.CurrentRow.Cells[7].Value.ToString();
+            //conversion4 = dg
+
+            texToQr.Text = $"{conversion}\r\n{conversion1}\r\n{conversion2}\r\n{conversion3}\r\n{conversion4}\r\n{conversion5}\r\n{conversion6}";
             QRCodeGenerator qrGenerator = new QRCodeGenerator();
             QRCodeData qrCodeData = qrGenerator.CreateQrCode(texToQr.Text, QRCodeGenerator.ECCLevel.Q);
             QRCode qrCode = new QRCode(qrCodeData);
-            pk = qrCode.GetGraphic(5);
-            
+            CodigoQRFRM code = new CodigoQRFRM();
+            code.Show();
+            code.pk1.Image = qrCode.GetGraphic(5);
 
+            this.Close();
         }
 
         private void texToQR_TextChanged(object sender, EventArgs e)
@@ -106,9 +130,16 @@ namespace Presentacion
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+            this.Hide();
             Top3FRM CV = new Top3FRM();
             CV.Show();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
+            LoginFRM log = new LoginFRM();
+            log.Show();
         }
     }
 }
